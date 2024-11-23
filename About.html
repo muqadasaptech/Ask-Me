@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="Image/png" href="IMAGES/logo.png">
+    <title>Smart Info</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- --------------style.css------------------------ -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- --------------Animation------------------>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- --------------------font family-------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <!-- -----------jquery----------------- -->
+    <!-- w3layout -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+
+        :root {
+            
+            
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+
+        .all {
+      overflow-x: hidden;
+    }
+
+    *{ 
+            font-family: sans-serif;
+        }
+
+     /* main navbar */
+     .navbar {
+            background-color: white;
+            padding: 20px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #AEC6CF;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #333 !important;
+            padding: 0 15px;
+            transition: color 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .navbar-nav .active, .nav-link:hover {
+            color: #AEC6CF !important;
+            border-bottom-color: #AEC6CF;
+        }
+
+        .search-input {
+            border: 2px solid #AEC6CF;
+            border-radius: 50px;
+            padding-left: 20px;
+            padding-right: 40px;
+            position: relative;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #AEC6CF;
+        }
+
+        .dropdown-menu {
+            border-radius: 0;
+            
+        }
+
+       
+            .navbar-collapse {
+                background-color: white;
+                padding: 15px;
+                
+            }
+
+            .search-form {
+                margin-bottom: 15px;
+            }
+
+    /* footer */
+    .news {
+      background-color: black;
+      color: #AEC6CF;
+    }
+
+    .news h1 {
+      color: #AEC6CF;
+      font-family: "Lobster", sans-serif;
+    }
+
+    .btn2 {
+      height: 45px;
+      width: 100px;
+      background: #AEC6CF;
+      margin-left: -10px;
+      border: 2px solid #AEC6CF;
+      font-weight: 600;
+    }
+
+    .news input {
+      height: 45px;
+      width: 55%;
+      border: 2px solid #AEC6CF;
+      outline: none;
+      background: black;
+      color: #AEC6CF;
+      
+      font-weight: 600;
+    }
+
+    .news::placeholder {
+      color: #AEC6CF;
+    }
+
+    .news p {
+      margin: 0;
+    }
+
+    .fab {
+      color: #AEC6CF;
+    font-size: 2.3rem;
+    cursor: pointer;
+    margin: 5px;
+    }
+
+    .link {
+      text-decoration: none;
+      color: #AEC6CF;
+      font-size: 16px;
+      cursor: pointer;
+    }
+/* about */
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(173, 232, 247, 0.9), rgba(167, 233, 250, 0.9)),
+                        url('IMAGES/contact.jpg') center/cover;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .stats-container {
+            background: white;
+            margin-top: -50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-box i {
+            font-size: 2.5rem;
+            color:#AEC6CF;
+            margin-bottom: 1rem;
+        }
+
+        .stat-box h3 {
+            font-size: 2rem;
+            color:#acdcee;
+            margin-bottom: 0.5rem;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #acdcee;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background:#AEC6CF;
+            border-radius: 2px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-img {
+            height: 250px;
+            background: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .member-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .member-info h3 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .member-info p {
+            color: var(--gray);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--gray);
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color:#AEC6CF;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .stats-container {
+                margin-top: -30px;
+                padding: 1rem;
+            }
+            
+            .stat-box {
+                padding: 1rem;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+   
+
+   <!-- Main Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-light">
+
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="IMAGES/logo.png" height="90" alt="Devicer Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <form class="d-flex position-relative w-50 mx-auto search-form">
+                <input class="form-control search-input" type="search" placeholder="Search" aria-label="Search">
+                <i class="fas fa-search search-icon"></i>
+            </form>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item ">
+                    <a class="nav-link " href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Brands
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="card-apple.html">iPhone</a></li>
+                        <li><a class="dropdown-item" href="card-Samsung.html">Samsung</a></li>
+                        <li><a class="dropdown-item" href="card-infinix.html">Infinix</a></li>
+                        <li><a class="dropdown-item" href="card-Redmi.html">Redmi</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="About.html">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+  <!-- about -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover the Future of Mobile</h1>
+            <p>Leading the way in mobile technology information since 2020, providing expert reviews, comparisons, and insights to help you make informed decisions.</p>
+        </div>
+    </section>
+
+    <div class="stats-container">
+        <div class="stat-box">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>1000+</h3>
+            <p>Phone Reviews</p>
+        </div>
+        <div class="stat-box">
+            <i class="fas fa-users"></i>
+            <h3>1M+</h3>
+            <p>Monthly Visitors</p>
+        </div>
+        <div class="stat-box">
+            <i class="fas fa-star"></i>
+            <h3>98%</h3>
+            <p>User Satisfaction</p>
+        </div>
+        <div class="stat-box">
+            <i class="fas fa-globe"></i>
+            <h3>150+</h3>
+            <p>Countries Reached</p>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <section class="section">
+            <h2>Our Mission</h2>
+            <p>At MobileInfo, we're passionate about bringing you the most comprehensive and accurate mobile technology information. Our mission is to simplify the complex world of smartphones and help you make informed decisions about your next mobile device.</p>
+        </section>
+
+        <section class="section">
+            <h2>Expert Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="IMAGES/about.jpg" alt="Alex Chen">
+                    </div>
+                    <div class="member-info">
+                        <h3>Alex Chen</h3>
+                        <p>Chief Technical Analyst</p>
+                        <div class="social-links">
+                          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://pk.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="IMAGES/about2.webp" alt="Sarah Miller">
+                    </div>
+                    <div class="member-info">
+                        <h3>Sarah Miller</h3>
+                        <p>Head of Reviews</p>
+                        <div class="social-links">
+                          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://pk.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="IMAGES/about1.jpg" alt="David Kim">
+                    </div>
+                    <div class="member-info">
+                        <h3>David Kim</h3>
+                        <p>Mobile Photography Expert</p>
+                        <div class="social-links">
+                          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://pk.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- --------------footer------------ -->
+    <section class="news py-5 ">
+      <div class="container py-5">
+          <div class="row">
+              <div class="col-lg-9 col-md-6 col-sm-4  m-auto text-center">
+                  <h1>Thanks For Visiting Smart Info</h1>
+                  <form>
+                    <input type="email" id="username" name="username" placeholder="Enter your Email..." required>
+                    <button class="btn2">Submit</button>
+                  </form>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-11 col-md-4 col-sm-6" >
+                  <div class="row">
+                      <div class="col-lg-3 col-md-4 col-sm-6 py-4" style="text-align: center;">
+                          <h5 class="pb-3">About Us</h5><hr>
+                          <p >You go to source for mobile information and tips.</p>
+                         
+                      </div>
+                       <div class="col-lg-3 col-md-4 col-sm-6 py-4 " style="text-align: center;">
+                          <h5 class="pb-3">Quick Links</h5><hr>
+                          <a href="index.html" class="link">Home</a><br>
+                          <a href="compare.html" class="link">Compare</a><br>
+                          <a href="contact.html" class="link">Contact Us</a><br>
+                          <a href="About.html" class="link">About Us</a>
+                      </div>
+                       <div class="col-lg-3 col-md-4 col-sm-6 py-4" style="text-align: center;">
+                          <h5 class="pb-3">Contact US</h5><hr>
+                          <p>Email:<a href="contact.html" class="link">webmaster@cellinfo.com</a></p>
+                          <p>Phone:<a href="contact.html" class="link">+001-28272300, 2466, 2469</a></p>
+                          
+                      </div> 
+                      <div class="col-lg-3 py-4"style="text-align: center;" >
+                          <h5 class="pb-3">SOCIAl MEDIA</h5><hr>
+                         
+                          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.google.com/"><i class="fab fa-google-plus-g"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <hr>
+          <p class="text-center">Clascopyright ©2021 All rights reserved | Design by Smart Info</p>
+      </div>
+    </section>
+
+    <!-- jquery -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- ------------------js----------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap/js/bootstrap.min.js">
+
+</body>
+
+</html>

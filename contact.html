@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="Image/png" href="IMAGES/logo.png">
+    <title>Smart Info</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- --------------style.css------------------------ -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+  <!-- --------------Animation------------------>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
+   <!-- --------------------font family-------------- -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+       href="https://fonts.googleapis.com/css2?family=Lobster&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+       rel="stylesheet">
+
+  <!-- -----------jquery----------------- -->
+  <!-- w3layout -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+       *{ 
+            font-family: sans-serif;
+        }
+    
+      /* main navbar */
+      /* main navbar */
+      .navbar {
+            background-color: white;
+            padding: 20px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #AEC6CF;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #333 !important;
+            padding: 0 15px;
+            transition: color 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .navbar-nav .active, .nav-link:hover {
+            color: #AEC6CF !important;
+            border-bottom-color: #AEC6CF;
+        }
+
+        .search-input {
+            border: 2px solid #AEC6CF;
+            border-radius: 50px;
+            padding-left: 20px;
+            padding-right: 40px;
+            position: relative;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #AEC6CF;
+        }
+
+        .dropdown-menu {
+            border-radius: 0;
+            
+        }
+
+       
+            .navbar-collapse {
+                background-color: white;
+                padding: 15px;
+                
+            }
+
+            .search-form {
+                margin-bottom: 15px;
+            }
+
+
+	
+  /* footer */
+  .news {
+    background-color: black;
+    color: #AEC6CF;
+    
+}
+
+.news h1 {
+    color: #AEC6CF;
+    font-family: "Lobster", sans-serif;
+}
+
+.btn2 {
+    height: 45px;
+    width: 100px;
+    background: #AEC6CF;
+    margin-left: -10px;
+    border: 2px solid #AEC6CF;
+    font-weight: 600;
+}
+
+.news input {
+    height: 45px;
+    width: 55%;
+    border: 2px solid #AEC6CF;
+    outline: none;
+    background: black;
+    color: #AEC6CF;
+    font-weight: 600;
+}
+
+.news::placeholder {
+    color: #AEC6CF;
+}
+
+.news p {
+    margin: 0;
+}
+
+.fab {
+    color: #AEC6CF;
+    font-size: 2.3rem;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.link {
+    text-decoration: none;
+    color: #AEC6CF;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+        /* contact us */
+        
+		 #contact{
+			font: 400 15px ;
+			line-height: 1.8;
+			margin: 0;
+			padding: 0;
+			background-size: cover;
+		}
+    .product-title {
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+    .price {
+      font-size: 1.8rem;
+      color: #444;
+    }
+    .highlight-badge {
+      background-color: #ffcc00;
+      color: #333;
+      font-size: 0.9rem;
+      padding: 0.3em 0.6em;
+      border-radius: 0.3rem;
+    }
+    .spec-table td, .spec-table th {
+      padding: 0.75rem;
+    }
+    .btn{
+      background-color: #AEC6CF;
+      color: black;
+     border:none;
+    
+      width: 100px;
+    }
+    .btn:hover{
+      background-color:#a9d3e2 ;
+      border:2px solid white ;
+
+    }
+
+    
+ /* header */
+ .header {
+      background:#AEC6CF;
+      padding: 4rem 2rem;
+      text-align: center;
+      
+    }
+
+   
+    </style>
+</head>
+
+<body>
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+      <div class="container">
+          <a class="navbar-brand" href="index.html"><img src="IMAGES/logo.png" height="90" alt="Devicer Logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <form class="d-flex position-relative w-50 mx-auto search-form">
+                  <input class="form-control search-input" type="search" placeholder="Search" aria-label="Search">
+                  <i class="fas fa-search search-icon"></i>
+              </form>
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item ">
+                      <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          Brands
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item " href="card-apple.html">iPhone</a></li>
+                          <li><a class="dropdown-item " href="card-Samsung.html">Samsung</a></li>
+                          <li><a class="dropdown-item " href="card-infinix.html">Infinix</a></li>
+                          <li><a class="dropdown-item " href="card-Redmi.html">Redmi</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" href="contact.html">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="About.html">About Us</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+     <!-- header -->
+  <header class="header"  data-aos="fade-down" data-aos-duration="2000">
+    <h1 style="background-color: #AEC6CF; color:white" class="text-center">Contact Us to Resolve Your Queries! </h1>
+    <hr class="w-25 m-auto">
+    <p style=" text-align: center;">We're here to help! If you have questions or need assistance, feel free to reach out. Our team is ready to provide the information you need</p>
+  </header>
+   <!-- contact -->
+    <div class="all-content">
+    <div class="container"  data-aos="fade-down">
+    <div id="contact" class="container">
+      <div class="row" style="margin-top: 100px;">
+        <div class="col-sm-5">
+          <p >
+            <b>We aim to respond within 24 hours.</b>
+          </p>
+          <p >
+            <span class="glyphicon glyphicon-map-marker"></span> Address of the Company: A-65, ACME Co., Street no 12, New York
+          </p>
+          <p >
+            <span class="glyphicon glyphicon-phone"></span> +001-28272300, 2466, 2469
+          </p>
+          <p >
+            <span class="glyphicon glyphicon-envelope"></span>
+            webmaster@cellinfo.com
+          </p>
+        </div>
+        <div class="col-sm-7" >
+          <div class="row">
+            <form action="">
+            <div class="col-sm-6  col-6 form-group" style="width: 100%;">
+              <input  style="background-color: #AEC6CF;margin-top:10px;" class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+            </div>
+            <div class="col-sm-6  col-6 form-group"style="width: 100%;">
+              <input  style="background-color: #AEC6CF;margin-top:10px;" class="form-control" id="email" name="email"  placeholder="Email" type="email" required>
+            </div>
+          </div>
+          <textarea   class="form-control col-lg-12" id="comments" name="comments"  placeholder="Comment" rows="5"
+            required style="margin-top: 12px; background-color: #AEC6CF;"></textarea>
+
+          <br>
+          <div class="row">
+            <div class="col-sm-2 form-group">
+              <button class="btn" type="submit">Send</button>
+            </div>
+          </form>
+            <script>
+              function myfunc2(event) {
+                event.preventDefault(); // Prevents the default form submission
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+                var comments = document.getElementById('comments').value;
+
+                // Check if all fields are filled
+                if (name && email && comments) {
+                    alert("Thanks For Contacting Us !!  we'll get back to you within 24 hours.");
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+  
+     <hr>
+      <br>
+      <div class="row mt-5 mb-5" data-aos="fade-down">
+        <div class="col-12">
+          <h2 style="color: #AEC6CF;">Description</h2>
+          <p>Offering detailed reviews and side-by-side comparisons of different models helps consumers make informed choices based on features, performance, and price. <br>Providing tips on selecting the right phone based on individual needs (e.g., photography, gaming, battery life) can enhance user satisfaction.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- --------------footer------------ -->
+<section class="news py-5 ">
+  <div class="container py-5">
+      <div class="row">
+          <div class="col-lg-9 col-md-6 col-sm-4  m-auto text-center">
+              <h1>Thanks For Visiting Smart Info</h1>
+              <form>
+                <input type="email" id="username" name="username" placeholder="Enter your Email..." required>
+                <button class="btn2">Submit</button>
+              </form>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-11 col-md-4 col-sm-6" >
+              <div class="row">
+                  <div class="col-lg-3 col-md-4 col-sm-6 py-4" style="text-align: center;">
+                      <h5 class="pb-3">About Us</h5><hr>
+                      <p >You go to source for mobile information and tips.</p>
+                     
+                  </div>
+                   <div class="col-lg-3 col-md-4 col-sm-6 py-4 " style="text-align: center;">
+                      <h5 class="pb-3">Quick Links</h5><hr>
+                      <a href="index.html" class="link">Home</a><br>
+                      <a href="compare.html" class="link">Compare</a><br>
+                      <a href="contact.html" class="link">Contact Us</a><br>
+                      <a href="About.html" class="link">About Us</a>
+                  </div>
+                   <div class="col-lg-3 col-md-4 col-sm-6 py-4" style="text-align: center;">
+                      <h5 class="pb-3">Contact US</h5><hr>
+                      <p>Email:<a href="contact.html" class="link">webmaster@cellinfo.com</a></p>
+                      <p>Phone:<a href="contact.html" class="link">+001-28272300, 2466, 2469</a></p>
+                      
+                  </div> 
+                  <div class="col-lg-3 py-4"style="text-align: center;" >
+                      <h5 class="pb-3">SOCIAl MEDIA</h5><hr>
+                     
+                      <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                      <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                      <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                      <a href="https://www.google.com/"><i class="fab fa-google-plus-g"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <hr>
+      <p class="text-center">Clascopyright ©2021 All rights reserved | Design by Smart Info</p>
+  </div>
+</section>
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- ------------------js----------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap/js/bootstrap.min.js">
+    
+</body>
+
+</html>
